@@ -1,72 +1,67 @@
-Traffic Accident Severity Prediction and Hotspot Analysis in the United States
+Traffic Accident Severity Prediction and Hotspot Analysis (U.S.)
+
 Overview
-This project aims to develop a machine learning-based predictive model for determining the severity of traffic accidents in the United States. Leveraging the US Accidents Dataset (2016–2023), the analysis incorporates environmental, temporal, and location-based features to improve public safety and emergency response strategies. The project also includes spatial hotspot detection to identify high-risk regions.
+This project uses machine learning to predict the severity of traffic accidents in the U.S. and identifies high-risk accident areas using geospatial analysis. The goal is to improve public safety and emergency response planning.
 
 Objectives
-•	Predict the severity level of traffic accidents using machine learning.
-•	Analyze environmental and temporal features impacting accident severity.
-•	Identify accident hotspots using geospatial data visualization.
-•	Evaluate and compare the performance of multiple ML models.
+* Predict accident severity using machine learning.
+* Analyze how weather, time, and location affect severity.
+* Visualize accident hotspots using maps.
+* Compare different machine learning models.
 
 Dataset
-•	Source: US Accidents Dataset (Kaggle.com)
-•	Duration: February 2016 to March 2023
-•	Coverage: 49 U.S. states
-•	Records: Over 7.7 million
-•	Features Used: Temperature, Humidity, Weather Condition, Start Time, End Time, Latitude, Longitude, Wind Speed, Visibility, etc.
-•	Target Variable: Severity
+* Source: US Accidents Dataset (Kaggle)
+* Duration: Feb 2016 – Mar 2023
+* Coverage: 49 U.S. states
+* Records: ~7.7 million
+* Main Features Used:
+    * Weather: Temperature, Humidity, Wind Speed, Visibility, Condition
+    * Time: Start Time, End Time
+    * Location: Latitude, Longitude
+* Target: Severity (4 levels)
 
+Tools & Technologies
+* Language: Python (Google Colab)
+* Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Folium
 
-Technologies Used
-•	Python
-•	Pandas, NumPy, Matplotlib, Seaborn
-•	Scikit-learn, XGBoost
-•	Google Colab
- 
-Preprocessing
+Data Preprocessing
+* Handled missing values (mean/median/mode)
+* Encoded categories using LabelEncoder
+* Normalized numerical features with StandardScaler
 
-•	Handled missing values using median, mean, and mode.
-•	Encoded categorical features using LabelEncoder.
-•	Normalized numerical features using StandardScaler.
+Machine Learning Models
+1. Random Forest
+2. Support Vector Machine (SVM)
+3. XGBoost
+4. XGBoost (after tuning)
 
-Models Used
-
-•	Random Forest
-•	Support Vector Machine (SVM)
-•	XGBoost
-
-Evaluation Metrics
-
-•	Accuracy
-•	Precision
-•	Recall
-•	F1-score
-•	Support
-
-
-
-Model Training s Testing
-•	Data Split: 80% Training, 20% Testing
-•	GridSearchCV used for hyperparameter tuning
-
-Results Summary
-
+Training & Evaluation
+* Data Split: 80% training / 20% testing
+* Tuning: Used GridSearchCV
+* Metrics Used: Accuracy, Precision, Recall, F1-score, Support
+Model Performance (Accuracy)
 Model	Accuracy
 Random Forest	81.67%
 SVM	79.54%
 XGBoost	83.13%
-XGBoost (after tunning)	83.21%
+XGBoost (Tuned)	83.21%
+Model Performance (Accuracy)
+Model	Accuracy
+Random Forest	81.67%
+SVM	79.54%
+XGBoost	83.13%
+XGBoost (Tuned)	83.21%
+Hotspot Visualization
+* Used Folium to create an interactive heatmap
+* High accident zones:
+    * California
+    * Texas
+    * Florida
 
-Accident Hotspot Visualization
-•	A folium-based heatmap is used to identify accident-prone zones.
- 
-•	High-density regions include:
-California, Texas, Florida
+Key Findings
+* XGBoost was the best-performing model.
+* Most accidents occurred during rush hours (7–9 AM, 4–6 PM).
+* Weather and visibility had a moderate impact on severity.
+* Hyperparameter tuning improved XGBoost accuracy.
 
-Key Insights
-•	XGBoost outperformed other models across all metrics.
-•	Most accidents occurred during peak hours (7–9 AM and 4–6 PM).
-•	Weather and visibility conditions moderately impact severity.
-•	Hyperparameter tuning significantly enhanced XGBoost performance.
-Cloning the Repository
-git clone https://github.com/yogesherla2/DataScienceProject-23032935.git cd DataScienceProject-23032935
+
