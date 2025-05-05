@@ -10,7 +10,7 @@ Objectives
 * Compare different machine learning models.
 
 Dataset
-* Source: US Accidents Dataset (Kaggle)
+* Source: US Accidents Dataset (Kaggle)-https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
 * Duration: Feb 2016 – Mar 2023
 * Coverage: 49 U.S. states
 * Records: ~7.7 million
